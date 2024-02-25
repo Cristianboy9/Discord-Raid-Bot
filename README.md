@@ -16,7 +16,7 @@ Run the following command in your terminal to install the dependencies:
 ```
 pip install discord.py
 ```
-
+-----------------------------------------------------------------------------------
 ## Copyright!
 Copyright © 2024 Cristianboy9
 
