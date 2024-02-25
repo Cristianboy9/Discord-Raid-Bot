@@ -1,4 +1,4 @@
-#Fast deletion of channels, too whit creation of channels and now send 35 messages in the channels
+#Fast deletion of channels and creation of channels and now send 35 messages in the channels
 import discord
 from discord.ext import commands, tasks
 import asyncio
