@@ -3,10 +3,10 @@ Discord Raid Bot created whit python
 
 ## How costumize the bot
 Go to the lines 29,30,31,32 and you can costumize the bot:
-1.Line 29 channels name
-2.Line 30 the message
-3.Line 31 speed of send messages
-4.Line 32 how many mensages will send in all channels
+Line 29 channels name,
+Line 30 the message,
+Line 31 speed of send messages,
+Line 32 how many mensages will send in all channels
 
 ## Auto Installation
 Open setup.bat and is installation all and later is go to create start.bat
