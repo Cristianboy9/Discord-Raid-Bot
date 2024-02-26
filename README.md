@@ -1,17 +1,26 @@
-# Discord-Raid-Bot
+# 🤖 Discord-Raid-Bot 🤖
 Discord Raid Bot created whit python
 
-## How costumize the bot
+## 🌟 Star for updaptes 🌟
+5 stars i add a comand for MD All members
+10 stars i add a mass ban and kick members
+More Cominges soon! 
+
+## 🛠 How costumize the bot 🛠
 Go to the lines 29,30,31,32 and you can costumize the bot:
+
 Line 29 channels name,
+
 Line 30 the message,
+
 Line 31 speed of send messages,
+
 Line 32 how many mensages will send in all channels
 
-## Auto Installation
+## 🔮 Auto Installation 🔮
 Open setup.bat and is installation all and later is go to create start.bat
 
-## Installation Instructions (whit no open stup.bat) 
+## ⚙️ Installation Instructions ⚙️ (whit no open stup.bat) 
 Run the following command in your terminal to install the dependencies:
 ```
 pip install discord.py
