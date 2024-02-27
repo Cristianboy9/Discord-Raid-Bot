@@ -3,9 +3,10 @@ Discord Raid Bot created whit python
 
 ## 🌟 Star for updaptes 🌟
 
-5 stars i add a comand for MD All members
+❌ 5 stars i add a comand for MD All members
 
-10 stars i add a mass ban and kick members
+❌ 10 stars i add a mass ban and kick members
+
 More Cominges soon! 
 
 ## 🛠 How costumize the bot 🛠
