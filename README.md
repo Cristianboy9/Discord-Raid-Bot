@@ -7,6 +7,8 @@ Discord Raid Bot created whit python
 
 ❌ 10 stars i add a mass ban and kick members
 
+❌ 15 I add ghost ping that send a message in all channels and delete
+
 More Cominges soon! 
 
 ## 🛠 How costumize the bot 🛠
