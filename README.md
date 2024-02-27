@@ -1,5 +1,5 @@
 # 🤖 Discord-Raid-Bot 🤖
-Discord Raid Bot created whit python
+Discord Raid Bot created for destroy servers!
 
 ## 🌟 Star for updaptes 🌟
 
