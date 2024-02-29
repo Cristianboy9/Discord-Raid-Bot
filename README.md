@@ -35,7 +35,7 @@ pip install discord.py
 
 Discord Server: Working no it.
 
-YouTube: https://m.youtube.com/@Project_GamerZ
+[YouTube](https://m.youtube.com/@Project_GamerZ) 
 -----------------------------------------------------------------------------------
 ## Copyright!
 Copyright © 2024 Cristianboy9
