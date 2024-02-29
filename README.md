@@ -30,6 +30,12 @@ Run the following command in your terminal to install the dependencies:
 ```
 pip install discord.py
 ```
+
+## 🌐 Social Media 🌐
+
+Discord Server: Working no it.
+
+YouTube: https://m.youtube.com/@Project_GamerZ
 -----------------------------------------------------------------------------------
 ## Copyright!
 Copyright © 2024 Cristianboy9
