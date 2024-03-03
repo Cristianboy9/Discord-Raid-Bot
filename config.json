@@ -1,0 +1,7 @@
+{
+  "bot_token": "TOKEN-OF-THE-BOT",
+  "message_to_send": "@everyone @here join to: ",
+  "channel_name": "Ultimate-Fucker",
+  "cooldown_delay": 0.1,
+  "num_messages": 35
+}
